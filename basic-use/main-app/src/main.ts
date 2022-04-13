@@ -33,25 +33,16 @@ function createScript (url: string) {
 const container = new Container({ defaultScope: 'Singleton' })
 container.load(buildProviderModule())
 container.get<IAppController>(IAppControllerKey).registerApps([
-  // {
-  //   name: 'subapp-react18',
-  //   routes: [{
-  //     path: 'subapp-react18/(.*)'
-  //   }],
-  //   loadApp: () => {
-  //     return Promise.resolve({
-  //       bootstrap: async () => {
-  //         // await delay(1)
-  //       },
-  //       mount: async () => {
-  //         // await delay(1)
-  //       },
-  //       unmount: async () => {
-  //         // await delay(1)
-  //       }
-  //     })
-  //   }
-  // },
+  {
+    name: 'subapp-react18',
+    routes: [{
+      path: 'subapp-react18/(.*)'
+    }],
+    loadApp: async () => {
+      await createScript('http://localhost:3000/static/js/bundle.js')
+      return (window as any).microApp
+    }
+  },
   {
     name: 'subapp-vue',
     routes: [{
@@ -59,8 +50,8 @@ container.get<IAppController>(IAppControllerKey).registerApps([
     }],
     loadApp: async () => {
       console.log('s')
-      await createScript('http://localhost:8081/subapp-vue/js/chunk-vendors.js')
-      await createScript('http://localhost:8081/subapp-vue/js/app.js')
+      await createScript('http://localhost:8082/subapp-vue/js/chunk-vendors.js')
+      await createScript('http://localhost:8082/subapp-vue/js/app.js')
       return (window as any).microApp
     }
   }
