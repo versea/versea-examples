@@ -1,0 +1,17 @@
+{
+  "name": "versea-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "basic-use/*"
+  ],
+  "repository": "https://github.com/versea/versea-examples.git",
+  "author": "Jinzhu Ke <kejinzhu126@126.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/cli": "^5.0.4",
+    "create-react-app": "^5.0.0",
+    "inversify": "^6.0.1"
+  }
+}
