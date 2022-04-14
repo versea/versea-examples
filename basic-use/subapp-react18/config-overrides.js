@@ -1,6 +1,5 @@
 // const { override } = require('customize-cra');
 module.exports = function override(config, env) {
-  config.output.publicPath = '/';
   config.output.library = 'microApp';
   config.output.libraryTarget = 'umd';
   config.output.publicPath = process.env.PUBLIC_URL;
