@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('microApp'));
+let root = null;
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
@@ -17,13 +17,16 @@ export function bootstrap(props) {
 
 export function mount() {
   console.log('app2 mount')
+  root = ReactDOM.createRoot(document.getElementById('microApp'));
   root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
   );
+  
 }
 
 export function unmount() {
-  console.log('app2 unmount')
+  root.unmount()
+  root = null;
 }

@@ -16,8 +16,7 @@
     "react-app-rewired": "^2.2.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "start:micro": "react-app-rewired start --mode micro",
+    "start": "react-app-rewired start --mode micro",
     "build": "react-app-rewired build",
     "build:micro": "react-app-rewired build --mode buildMicro",
     "test": "react-app-rewired test",

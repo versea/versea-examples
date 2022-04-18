@@ -20,5 +20,7 @@ export function mount() {
 
 export function unmount() {
   console.log('app1 unmount')
-  vm.$destroy();
+  vm.$destroy()
+  vm.$el.innerHTML = ''
+  vm = null
 }

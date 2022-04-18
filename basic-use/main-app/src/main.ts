@@ -4,10 +4,10 @@ import router from './router'
 import store from './store'
 import {
   buildProviderModule,
-  IRouterKey,
-  IRouter,
   IAppService,
-  IAppServiceKey
+  IAppServiceKey,
+  IRouter,
+  IRouterKey
 } from '@versea/core'
 import { Container } from 'inversify'
 
