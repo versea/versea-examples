@@ -4,19 +4,12 @@ import router from './router'
 import store from './store'
 import {
   buildProviderModule,
-  IAppController,
-  IAppControllerKey,
-  AppConfig,
-  IAppKey,
-  provide,
-  provideValue,
-  AppDependencies,
-  // IRouter,
-  // IRouterKey,
-  IRouterController,
-  IRouterControllerKey
+  IRouterKey,
+  IRouter,
+  IAppService,
+  IAppServiceKey
 } from '@versea/core'
-import { Container, inject } from 'inversify'
+import { Container } from 'inversify'
 
 // 远程加载子应用
 function createScript (url: string) {
@@ -32,7 +25,7 @@ function createScript (url: string) {
 
 const container = new Container({ defaultScope: 'Singleton' })
 container.load(buildProviderModule())
-container.get<IAppController>(IAppControllerKey).registerApps([
+container.get<IAppService>(IAppServiceKey).registerApps([
   {
     name: 'subapp-react18',
     routes: [{
@@ -49,8 +42,8 @@ container.get<IAppController>(IAppControllerKey).registerApps([
       path: '/subapp-vue/(.*)'
     }],
     loadApp: async () => {
-      await createScript('http://localhost:8081/subapp-vue/js/chunk-vendors.js')
-      await createScript('http://localhost:8081/subapp-vue/js/app.js')
+      await createScript('http://localhost:8082/subapp-vue/js/chunk-vendors.js')
+      await createScript('http://localhost:8082/subapp-vue/js/app.js')
       return (window as any).microApp
     }
   }
@@ -62,7 +55,7 @@ new Vue({
   router,
   store,
   mounted () {
-    container.get<IRouterController>(IRouterControllerKey).start()
+    container.get<IRouter>(IRouterKey).start()
   },
   render: h => h(App)
 }).$mount('#app')
