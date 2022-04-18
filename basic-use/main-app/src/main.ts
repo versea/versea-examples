@@ -42,8 +42,8 @@ container.get<IAppService>(IAppServiceKey).registerApps([
       path: '/subapp-vue/(.*)'
     }],
     loadApp: async () => {
-      await createScript('http://localhost:8082/subapp-vue/js/chunk-vendors.js')
-      await createScript('http://localhost:8082/subapp-vue/js/app.js')
+      await createScript('http://localhost:8081/subapp-vue/js/chunk-vendors.js')
+      await createScript('http://localhost:8081/subapp-vue/js/app.js')
       return (window as any).microApp
     }
   }
