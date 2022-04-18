@@ -4,15 +4,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-// new Vue({
-//   router,
-//   render: h => h(App)
-// }).$mount('#app')
-const appOptions = {
-  el: '#microApp',
-  router,
-  render: h => h(App)
-}
+let vm = null;
 
 export function bootstrap() {
   console.log('app1 bootstrap')
@@ -20,7 +12,10 @@ export function bootstrap() {
 
 export function mount() {
   console.log('app1 mount')
-  new Vue(appOptions);
+  vm = new Vue({
+    router,
+    render: h => h(App)
+  }).$mount('#microApp');
 }
 
 export function unmount() {

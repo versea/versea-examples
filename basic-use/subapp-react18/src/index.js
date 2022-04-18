@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(document.getElementById('microApp'));
 reportWebVitals();
 
 export function bootstrap(props) {
-  console.log('app1 bootstrap')
+  console.log('app2 bootstrap')
 }
 
 export function mount() {
-  console.log('app1 mount')
+  console.log('app2 mount')
   root.render(
     <React.StrictMode>
       <App />
@@ -25,5 +25,5 @@ export function mount() {
 }
 
 export function unmount() {
-  console.log('app1 unmount')
+  console.log('app2 unmount')
 }
