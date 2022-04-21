@@ -6,8 +6,8 @@ import {
   buildProviderModule,
   IAppService,
   IAppServiceKey,
-  IRouter,
-  IRouterKey
+  IStarter,
+  IStarterKey
 } from '@versea/core'
 import { Container } from 'inversify'
 
@@ -29,7 +29,7 @@ container.get<IAppService>(IAppServiceKey).registerApps([
   {
     name: 'subapp-react18',
     routes: [{
-      path: 'subapp-react18/(.*)'
+      path: 'subapp-react18'
     }],
     loadApp: async () => {
       await createScript('http://localhost:3000/static/js/bundle.js')
@@ -39,7 +39,7 @@ container.get<IAppService>(IAppServiceKey).registerApps([
   {
     name: 'subapp-vue',
     routes: [{
-      path: '/subapp-vue/(.*)'
+      path: 'subapp-vue'
     }],
     loadApp: async () => {
       await createScript('http://localhost:8081/subapp-vue/js/chunk-vendors.js')
@@ -55,7 +55,7 @@ new Vue({
   router,
   store,
   mounted () {
-    container.get<IRouter>(IRouterKey).start()
+    container.get<IStarter>(IStarterKey).start()
   },
   render: h => h(App)
 }).$mount('#app')
