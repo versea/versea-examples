@@ -9,7 +9,7 @@ module.exports = defineConfig({
   },
   configureWebpack: {
     output: {
-      library: 'microApp',
+      library: 'subapp-vue',
       libraryTarget: 'umd'
     }
   }

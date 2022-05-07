@@ -17,7 +17,7 @@ export function bootstrap(props) {
 
 export function mount() {
   console.log('app2 mount')
-  root = ReactDOM.createRoot(document.getElementById('microApp'));
+  root = ReactDOM.createRoot(document.getElementById('subapp-react18'));
   root.render(
     <React.StrictMode>
       <App />

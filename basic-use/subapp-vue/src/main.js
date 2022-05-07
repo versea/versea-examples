@@ -15,7 +15,7 @@ export function mount() {
   vm = new Vue({
     router,
     render: h => h(App)
-  }).$mount('#microApp');
+  }).$mount('#subapp-vue');
 }
 
 export function unmount() {
