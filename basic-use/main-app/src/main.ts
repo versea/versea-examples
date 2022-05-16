@@ -5,10 +5,10 @@ import store from './store'
 import {
   Versea
 } from '@versea/versea'
-import { IPluginResourceEntryKey } from '@versea/plugin-resource-entry'
+import { IPluginSourceEntryKey } from '@versea/plugin-source-entry'
 
 const versea = new Versea({ defaultContainer: '#microApp' })
-versea.use(IPluginResourceEntryKey)
+versea.use(IPluginSourceEntryKey)
 
 versea.registerApps([
   {
@@ -26,8 +26,8 @@ versea.registerApps([
       path: 'subapp-vue'
     }],
     scripts: [
-      'http://localhost:8081/subapp-vue/js/chunk-vendors.js',
-      'http://localhost:8081/subapp-vue/js/app.js'
+      'http://localhost:8088/subapp-vue/js/chunk-vendors.js',
+      'http://localhost:8088/subapp-vue/js/app.js'
     ]
   }
 ])
