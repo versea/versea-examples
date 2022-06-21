@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>app1 about page</h1>
+    <h1>child-vue about page</h1>
   </div>
 </template>

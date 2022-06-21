@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
-
 const parcelApp = window.verseaApp.registerParcel({
   name: 'parcel-vue',
   container: '#parcel-vue',
@@ -20,20 +18,17 @@ const parcelApp = window.verseaApp.registerParcel({
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
-  },
   methods: {
     goReact() {
       window.history.pushState(null, null, '/child-react18/xxxx');
     }
   },
   mounted() {
-    window.verseaApp.loadParcel(parcelApp)
+    parcelApp.loadAndMount();
   },
   beforeDestroy() {
     if (parcelApp.status === 'Mounted') {
-      parcelApp.unmount()
+      parcelApp.unmount();
     }
   }
 }

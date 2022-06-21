@@ -7,6 +7,7 @@
     </nav>
     <!-- 子应用容器 -->
     <div id="microApp"></div>
+    <router-view></router-view>
   </div>
 </template>
 
