@@ -5,7 +5,10 @@ module.exports = defineConfig({
   publicPath: 'http://localhost:8088/subapp-vue',
   // 开发服务器
   devServer: {
-    port: 8088
+    port: 8088,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
   configureWebpack: {
     output: {

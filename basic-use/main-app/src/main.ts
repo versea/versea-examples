@@ -5,10 +5,12 @@ import store from './store'
 import {
   Versea
 } from '@versea/versea'
-import { IPluginSourceEntryKey } from '@versea/plugin-source-entry'
+import { IPluginSourceEntry } from '@versea/plugin-source-entry'
+import { IPluginSandbox } from '@versea/plugin-sandbox'
 
 const versea = new Versea({ defaultContainer: '#microApp' })
-versea.use(IPluginSourceEntryKey)
+versea.use(IPluginSourceEntry)
+versea.use(IPluginSandbox)
 
 versea.registerApps([
   {
@@ -16,6 +18,7 @@ versea.registerApps([
     routes: [{
       path: 'subapp-react18'
     }],
+    assetsPublicPath: 'http://localhost:3000',
     scripts: [
       'http://localhost:3000/static/js/bundle.js'
     ]
@@ -23,7 +26,15 @@ versea.registerApps([
   {
     name: 'subapp-vue',
     routes: [{
-      path: 'subapp-vue'
+      path: 'subapp-vue',
+      children: [
+        {
+          path: '/about'
+        },
+        {
+          path: '/'
+        }
+      ]
     }],
     scripts: [
       'http://localhost:8088/subapp-vue/js/chunk-vendors.js',
@@ -32,7 +43,9 @@ versea.registerApps([
   }
 ])
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+(window as any).versea = versea
 
 new Vue({
   router,

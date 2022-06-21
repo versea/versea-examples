@@ -6,12 +6,11 @@ Vue.config.productionTip = false
 
 let vm = null;
 
-export function bootstrap() {
-  console.log('app1 bootstrap')
-}
+window.a = 1
 
 export function mount() {
   console.log('app1 mount')
+  console.log(window.a)
   vm = new Vue({
     router,
     render: h => h(App)
