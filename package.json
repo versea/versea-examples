@@ -1,22 +1,32 @@
 {
-  "name": "versea-examples",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "root",
   "private": true,
   "workspaces": [
-    "basic-use/*"
+    "sandbox/*",
+    "switcher/*"
   ],
-  "repository": "https://github.com/versea/versea-examples.git",
-  "author": "Jinzhu Ke <kejinzhu126@126.com>",
-  "license": "MIT",
+  "devEngines": {
+    "node": ">=12.22"
+  },
   "scripts": {
-    "start": "lerna run start"
+    "run:switcher": "lerna run start --scope @case-switcher/**",
+    "run:sandbox": "lerna run start --scope @case-sandbox/**"
   },
   "dependencies": {
+    "@versea/core": "0.2.0",
+    "@versea/plugin-sandbox": "0.2.0",
+    "@versea/plugin-source-entry": "0.2.0",
+    "@versea/shared": "0.2.0",
+    "@versea/tapable": "0.2.0",
+    "@versea/versea": "0.2.0",
     "@vue/cli": "^5.0.4",
     "create-react-app": "^5.0.0",
     "eslint-config-react-app": "^7.0.1",
     "lerna": "^4.0.0",
     "inversify": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versea/versea-examples.git"
   }
 }
