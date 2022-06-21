@@ -3,7 +3,10 @@ module.exports = defineConfig({
   transpileDependencies: true,
   publicPath: 'http://localhost:8088/child-vue',
   devServer: {
-    port: 8088
+    port: 8088,
+    headers: {
+      'Access-Control-Allow-Origin': '*'            
+    }
   },
   configureWebpack: {
     output: {
