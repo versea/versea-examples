@@ -14,7 +14,10 @@ versea.registerApps([
   {
     name: 'child-react18',
     routes: [{
-      path: 'child-react18'
+      path: 'child-react18',
+      pathToRegexpOptions: {
+        end: false
+      }
     }],
     scripts: [
       'http://localhost:3000/child-react18/static/js/bundle.js'
@@ -23,7 +26,10 @@ versea.registerApps([
   {
     name: 'child-vue',
     routes: [{
-      path: 'child-vue'
+      path: 'child-vue',
+      pathToRegexpOptions: {
+        end: false
+      }
     }],
     scripts: [
       'http://localhost:8088/child-vue/js/chunk-vendors.js',
