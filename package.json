@@ -4,7 +4,8 @@
   "workspaces": [
     "parcel/*",
     "sandbox/*",
-    "switcher/*"
+    "switcher/*",
+    "nested-routes/*"
   ],
   "devEngines": {
     "node": ">=12.22"
@@ -12,7 +13,9 @@
   "scripts": {
     "run:parcel": "lerna run start --scope @case-parcel/**",
     "run:switcher": "lerna run start --scope @case-switcher/**",
-    "run:sandbox": "lerna run start --scope @case-sandbox/**"
+    "run:sandbox": "lerna run start --scope @case-sandbox/**",
+    "run:nested-routes": "lerna run start --scope @case-nested-routes/**",
+    "update-versea":"node scripts/update-versea.js"
   },
   "dependencies": {
     "@versea/core": "0.2.0",
