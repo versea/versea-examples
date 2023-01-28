@@ -1,17 +1,15 @@
 <template>
-  <div id="app">
+  <div id="child-vue">
     <nav>
-      <div>主应用</div>
-      <router-link to="/child-react18">child-react18</router-link>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
     </nav>
-    <!-- 子应用容器 -->
-    <div id="microApp"></div>
     <router-view />
   </div>
 </template>
 
 <style>
-#app {
+#microApp {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

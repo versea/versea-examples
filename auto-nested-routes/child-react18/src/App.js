@@ -1,7 +1,5 @@
 import logo from './logo.svg';
-import { useEffect } from 'react'
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import { containerController } from './container-controller'
 import './App.css';
 
 function App() {
@@ -60,16 +58,6 @@ const Dashboard = () => (
 );
 
 const ReactContainer = () => {
-  useEffect(() => {
-    containerController.resolve('react-container')
-    return () => {
-      if (containerController.has('react-container')) {
-        containerController.reject('react-container')
-        containerController.delete('react-container')
-      }
-    }
-  })
-
   return (
     <div>
       <h2>ReactContainer</h2>

@@ -4,7 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { containerController } from './container-controller'
 
 let root = null;
 
@@ -22,9 +21,6 @@ export function mount() {
       </BrowserRouter>
     </React.StrictMode>
   );
-  return {
-    containerController
-  }
 }
 
 export function unmount() {

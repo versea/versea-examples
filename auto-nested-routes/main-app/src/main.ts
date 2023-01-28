@@ -6,10 +6,12 @@ import {
   Versea
 } from '@versea/versea'
 import { IPluginSourceEntry } from '@versea/plugin-source-entry'
+import { IPluginAutoWaitContainer } from '@versea/plugin-auto-wait-container'
 import { IPluginSandbox } from '@versea/plugin-sandbox'
 
 const versea = new Versea({ defaultContainer: '#microApp' })
 versea.use(IPluginSourceEntry)
+versea.use(IPluginAutoWaitContainer)
 versea.use(IPluginSandbox)
 
 versea.registerApp({
@@ -50,4 +52,6 @@ new Vue({
     versea.start()
   },
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
+
+(window as any).versea = versea

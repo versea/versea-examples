@@ -2,10 +2,11 @@
   "name": "root",
   "private": true,
   "workspaces": [
+    "auto-nested-routes/*",
+    "nested-routes/*",
     "parcel/*",
     "sandbox/*",
-    "switcher/*",
-    "nested-routes/*"
+    "switcher/*"
   ],
   "devEngines": {
     "node": ">=12.22"
@@ -15,15 +16,16 @@
     "run:switcher": "lerna run start --scope @case-switcher/**",
     "run:sandbox": "lerna run start --scope @case-sandbox/**",
     "run:nested-routes": "lerna run start --scope @case-nested-routes/**",
-    "update-versea":"node scripts/update-versea.js"
+    "run:auto-nested-routes": "lerna run start --scope @case-auto-nested-routes/**"
   },
   "dependencies": {
-    "@versea/core": "0.2.0",
-    "@versea/plugin-sandbox": "0.2.0",
-    "@versea/plugin-source-entry": "0.2.0",
-    "@versea/shared": "0.2.0",
-    "@versea/tapable": "0.2.0",
-    "@versea/versea": "0.2.0",
+    "@versea/core": "0.2.3",
+    "@versea/plugin-sandbox": "0.2.3",
+    "@versea/plugin-source-entry": "0.2.3",
+    "@versea/plugin-auto-wait-container": "0.2.3",
+    "@versea/shared": "0.2.3",
+    "@versea/tapable": "0.2.3",
+    "@versea/versea": "0.2.3",
     "@vue/cli": "^5.0.4",
     "create-react-app": "^5.0.0",
     "eslint-config-react-app": "^7.0.1",
