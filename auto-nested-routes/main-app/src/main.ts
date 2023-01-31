@@ -24,6 +24,10 @@ versea.registerApp({
     }]
   }],
   scripts: [
+    {
+      module: true,
+      code: 'console.log("inline");'
+    },
     'http://localhost:3000/child-react18/static/js/bundle.js'
   ]
 })

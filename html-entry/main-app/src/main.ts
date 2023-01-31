@@ -6,9 +6,13 @@ import {
   Versea
 } from '@versea/versea'
 import { IPluginSourceEntry } from '@versea/plugin-source-entry'
+import { IPluginSandbox } from '@versea/plugin-sandbox'
+import { IPluginHtmlEntry } from '@versea/plugin-html-entry'
 
 const versea = new Versea({ defaultContainer: '#microApp' })
 versea.use(IPluginSourceEntry)
+versea.use(IPluginSandbox)
+versea.use(IPluginHtmlEntry)
 
 versea.registerApps([
   {
@@ -19,12 +23,7 @@ versea.registerApps([
         end: false
       }
     }],
-    scripts: [
-      {
-        code: 'console.log("inline");'
-      },
-      'http://localhost:3000/child-react18/static/js/bundle.js'
-    ]
+    entry: 'http://localhost:3000/child-react18'
   },
   {
     name: 'child-vue',
@@ -34,10 +33,7 @@ versea.registerApps([
         end: false
       }
     }],
-    scripts: [
-      'http://localhost:8088/child-vue/js/chunk-vendors.js',
-      'http://localhost:8088/child-vue/js/app.js'
-    ]
+    entry: 'http://localhost:8088/child-vue'
   }
 ])
 

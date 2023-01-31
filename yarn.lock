@@ -4000,14 +4000,14 @@
     "@typescript-eslint/types" "5.29.0"
     eslint-visitor-keys "^3.3.0"
 
-"@versea/core@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@versea/core/-/core-0.2.3.tgz#462f9c96f76286b762619f41cc858dbbf00decd0"
-  integrity sha512-Ma3W5QCQQzhgJynO+ve3XLHIjPrps+s8CWzkxkLWWAciBmkrA7XCrXZpGnMO7qeRz290EZnQzZFTsMJ4VYjrVQ==
+"@versea/core@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/core/-/core-0.3.0.tgz#8af639d5ba0ddbd2b4c208d1170a6d96e488d23f"
+  integrity sha512-XKGs63OlxY2ooAfvBMejfkHhxN46tEZRoh06ZDYqbUVf4caIbbzj7udyM5utMuAnNKVIfymOAzvU/J8CRFFSjw==
   dependencies:
     "@types/ramda" "^0.28.3"
-    "@versea/shared" "0.2.3"
-    "@versea/tapable" "0.2.3"
+    "@versea/shared" "0.3.0"
+    "@versea/tapable" "0.3.0"
     inversify "^6.0.1"
     path-to-regexp "^6.2.0"
     query-string "^7.1.1"
@@ -4016,66 +4016,77 @@
     tslib "^2.3.1"
     typescript-lodash "^0.0.6"
 
-"@versea/plugin-auto-wait-container@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@versea/plugin-auto-wait-container/-/plugin-auto-wait-container-0.2.3.tgz#8b63029b258080e6c250342ba10ae0437e58fd24"
-  integrity sha512-F03du+iqNJ4BkKoPjPFt8FUvLw8M24ICqh3W+Hqk8Ropa0lhlytpdN9Wblpwhco6+3LglLK0SBx/IagtWlQDxw==
+"@versea/plugin-auto-wait-container@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/plugin-auto-wait-container/-/plugin-auto-wait-container-0.3.0.tgz#41f7b6593d43ddec4de9fc8dd7c9386269ec88d1"
+  integrity sha512-6g3t3aIeAcwuTdAQgz1Iw7xs423KVcgIxllt4HHxQ/2bcZG63GQ5YajYeaZeBV915rVMopHgHEHulH93qgIaKA==
   dependencies:
     "@types/ramda" "^0.28.3"
-    "@versea/core" "0.2.3"
-    "@versea/plugin-source-entry" "0.2.3"
-    "@versea/shared" "0.2.3"
+    "@versea/core" "0.3.0"
+    "@versea/plugin-source-entry" "0.3.0"
+    "@versea/shared" "0.3.0"
     inversify "^6.0.1"
     ramda "^0.28.0"
     tslib "^2.3.1"
 
-"@versea/plugin-sandbox@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@versea/plugin-sandbox/-/plugin-sandbox-0.2.3.tgz#d662342bfc4f0cd0f0fa2ef2ddb88a4854c12bf2"
-  integrity sha512-rqTkObrAeuVCcijwusnLWeEsReMPxjZe9lfGnwFdqOYjY3IiBUvtksOKgNhxbLrQMR32OIQT7H0DTZ4WIUC1Ig==
+"@versea/plugin-html-entry@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/plugin-html-entry/-/plugin-html-entry-0.3.0.tgz#dc5c9629e39b3b510c192d08837991eb98da844d"
+  integrity sha512-Z/SzbLCIxVKCQypdpehWLxYmW8mqeu+6Az3mpzwlSNxxqWDxUTsj3J0yMaghpTeWBo+MiEhCoe+iz8qDrW2k9g==
   dependencies:
-    "@versea/core" "0.2.3"
-    "@versea/plugin-source-entry" "0.2.3"
-    "@versea/shared" "0.2.3"
-    "@versea/tapable" "0.2.3"
+    "@versea/core" "0.3.0"
+    "@versea/plugin-source-entry" "0.3.0"
+    "@versea/shared" "0.3.0"
     inversify "^6.0.1"
     tslib "^2.3.1"
 
-"@versea/plugin-source-entry@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@versea/plugin-source-entry/-/plugin-source-entry-0.2.3.tgz#ca4262ae11cd29a0d29fcd457cbaf17286a02f7a"
-  integrity sha512-MeKsW+MPWX1fSvxJrCx5ouG2viLGjKC5vQTiEi0INean56adin2JNPy/YtCCOO2iHWP2s1kQ5paZ361pjrHi9Q==
+"@versea/plugin-sandbox@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/plugin-sandbox/-/plugin-sandbox-0.3.0.tgz#deafa308c45182720aeccdff224d76b729ecddfe"
+  integrity sha512-OZumBB7OooUsP4eV0l/5gMZU0qU1HBdvZATwkFSYBWKdD/7qgomfFJDQ30Ucq3l8MST4jQdB2oMeRe0rIHUnTQ==
+  dependencies:
+    "@versea/core" "0.3.0"
+    "@versea/plugin-source-entry" "0.3.0"
+    "@versea/shared" "0.3.0"
+    "@versea/tapable" "0.3.0"
+    inversify "^6.0.1"
+    tslib "^2.3.1"
+
+"@versea/plugin-source-entry@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/plugin-source-entry/-/plugin-source-entry-0.3.0.tgz#a06fab1c4f7fa3967ec94b8f52df1c25fa364d5c"
+  integrity sha512-Rc/tYhRH05Yfy3UuyzeEmmxtMcQUf/uN7IuVpCC/fs2t8qDbmMAwp+uOJwKa6rUpWgJMvrjRLiTAoWeZbi6Ejg==
   dependencies:
     "@types/ramda" "^0.28.3"
-    "@versea/core" "0.2.3"
-    "@versea/shared" "0.2.3"
-    "@versea/tapable" "0.2.3"
+    "@versea/core" "0.3.0"
+    "@versea/shared" "0.3.0"
+    "@versea/tapable" "0.3.0"
     inversify "^6.0.1"
     ramda "^0.28.0"
     snake-case "^3.0.4"
     tslib "^2.3.1"
 
-"@versea/shared@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@versea/shared/-/shared-0.2.3.tgz#40acace25745d299972a1d78f644105681a8776d"
-  integrity sha512-jFYz9unR0xaBXBDWOW0+z+QTaQa4xZRKQmRW7hZx0kfdazhQW7xWq5tA32iePQnHkMpSaXVntMC+Yfh07ouWIQ==
+"@versea/shared@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/shared/-/shared-0.3.0.tgz#a362a0271e865439288f1b33d975b0e63329e73b"
+  integrity sha512-WaYtMU2bYLpLMRpARHvPWwQc3uZ4p5yl56jILR1XBD9QHEsc/uGrrlg+F91I2BGfkexy4QwMVaiMY6WQztHRvw==
   dependencies:
     tslib "^2.3.1"
 
-"@versea/tapable@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@versea/tapable/-/tapable-0.2.3.tgz#6ff05f5237e95d3a7217af1c6efb1839473a0c43"
-  integrity sha512-LyP2Ga2Dqe3ullgTQPEnFu7/vjlqjFMPgiHUeD9Q8Xb9/KL3i4TYkG/uLNUNuaRxxUxanmP4Az5NEMuQLjn3mg==
+"@versea/tapable@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/tapable/-/tapable-0.3.0.tgz#c7d3c46972652ceb369f33b0ebf9a2cc4294dcaa"
+  integrity sha512-Cs0qOmygT7xfc3hIsbjZ/SFFqwql/DekKJOh3zDowgAmXyIQGCLy0yMjuQJlWPb5wfDTcVRG1ZTp5U0wBW4q8w==
   dependencies:
-    "@versea/shared" "0.2.3"
+    "@versea/shared" "0.3.0"
     tslib "^2.3.1"
 
-"@versea/versea@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@versea/versea/-/versea-0.2.3.tgz#4b3af6ba8e9e052891a12b34765871e16533f892"
-  integrity sha512-cAl381oT/MTsGzSMVLB1mDoynXDUpgGp+eUqjYd3yJb+I2TsbGgg4oJE+xkNWdsN7ste6cVBWksS4IQrQDhRoQ==
+"@versea/versea@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@versea/versea/-/versea-0.3.0.tgz#15ad4231663832b9be77dde8f8a7d4586276177f"
+  integrity sha512-XZmnTugjYPbkXk3NtV4dOlSDtIs7+3uh+bpMLqoTEDN2CO/6ydcOxSnUGc+QGuuO11w57qeeu2MHUX5eHCjbxw==
   dependencies:
-    "@versea/core" "0.2.3"
+    "@versea/core" "0.3.0"
     inversify "^6.0.1"
     tslib "^2.3.1"
 
