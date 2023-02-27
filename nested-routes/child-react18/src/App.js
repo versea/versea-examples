@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import logo from './logo.svg'
 import { useEffect } from 'react'
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route, Outlet, Link } from 'react-router-dom'
 import { containerController } from './container-controller'
-import './App.css';
+import './App.css'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,10 +23,10 @@ function App() {
         </Routes>
       </div>
     </div>
-  );
+  )
 }
 
-function Layout() {
+function Layout () {
   return (
     <div>
       <nav>
@@ -44,20 +44,20 @@ function Layout() {
       </nav>
       <Outlet />
     </div>
-  );
+  )
 }
 
 const Home = () => (
   <div>
     <h2>Welcome</h2>
   </div>
-);
+)
 
 const Dashboard = () => (
   <div>
     <h2>Dashboard</h2>
   </div>
-);
+)
 
 const ReactContainer = () => {
   useEffect(() => {
@@ -76,6 +76,6 @@ const ReactContainer = () => {
       <div id="react-container"></div>
     </div>
   )
-};
+}
 
-export default App;
+export default App

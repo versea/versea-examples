@@ -14,8 +14,8 @@ export default {
     HelloWorld
   },
   methods: {
-    goReact() {
-      window.history.pushState(null, null, '/child-react18/xxxx');
+    goReact () {
+      window.history.pushState(null, null, '/child-react18/xxxx')
     }
   }
 }

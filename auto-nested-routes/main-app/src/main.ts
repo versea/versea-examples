@@ -58,4 +58,4 @@ new Vue({
   render: h => h(App)
 }).$mount('#app');
 
-(window as any).versea = versea
+(window as unknown as { versea: Versea }).versea = versea

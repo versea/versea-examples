@@ -14,21 +14,21 @@ const parcelApp = window.verseaApp.registerParcel({
     'http://localhost:8089/parcel-vue/js/chunk-vendors.js',
     'http://localhost:8089/parcel-vue/js/app.js'
   ]
-});
+})
 
 export default {
   name: 'HomeView',
   methods: {
-    goReact() {
-      window.history.pushState(null, null, '/child-react18/xxxx');
+    goReact () {
+      window.history.pushState(null, null, '/child-react18/xxxx')
     }
   },
-  mounted() {
-    parcelApp.loadAndMount();
+  mounted () {
+    parcelApp.loadAndMount()
   },
-  beforeDestroy() {
+  beforeDestroy () {
     if (parcelApp.status === 'Mounted') {
-      parcelApp.unmount();
+      parcelApp.unmount()
     }
   }
 }
