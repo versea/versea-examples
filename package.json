@@ -13,12 +13,12 @@
     "node": ">=12.22"
   },
   "scripts": {
-    "run:parcel": "lerna run start --scope @case-parcel/**",
-    "run:switcher": "lerna run start --scope @case-switcher/**",
-    "run:sandbox": "lerna run start --scope @case-sandbox/**",
-    "run:nested-routes": "lerna run start --scope @case-nested-routes/**",
-    "run:auto-nested-routes": "lerna run start --scope @case-auto-nested-routes/**",
-    "run:html-entry": "lerna run start --scope @case-html-entry/**",
+    "run:parcel": "lerna run start --scope @case-parcel/** --parallel",
+    "run:switcher": "lerna run start --scope @case-switcher/** --parallel",
+    "run:sandbox": "lerna run start --scope @case-sandbox/** --parallel",
+    "run:nested-routes": "lerna run start --scope @case-nested-routes/** --parallel",
+    "run:auto-nested-routes": "lerna run start --scope @case-auto-nested-routes/** --parallel",
+    "run:html-entry": "lerna run start --scope @case-html-entry/** --parallel",
     "lint": "eslint .",
     "postinstall": "node ./scripts/husky.js"
   },
@@ -38,10 +38,15 @@
     "lerna": "^4.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/prompt-cli": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "conventional-commit-types": "^3.0.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
@@ -51,11 +56,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "typescript": "~4.5.5",
-    "vue-template-compiler": "^2.6.14",
-    "@commitlint/cli": "^16.0.1",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@commitlint/prompt-cli": "^16.0.0",
-    "conventional-commit-types": "^3.0.0"
+    "vue-template-compiler": "^2.6.14"
   },
   "repository": {
     "type": "git",
