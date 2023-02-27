@@ -19,7 +19,8 @@
     "run:nested-routes": "lerna run start --scope @case-nested-routes/**",
     "run:auto-nested-routes": "lerna run start --scope @case-auto-nested-routes/**",
     "run:html-entry": "lerna run start --scope @case-html-entry/**",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "node ./scripts/husky.js"
   },
   "dependencies": {
     "@versea/core": "0.3.0",
@@ -47,11 +48,22 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-vue": "^8.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "typescript": "~4.5.5",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/prompt-cli": "^16.0.0",
+    "conventional-commit-types": "^3.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/versea/versea-examples.git"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ]
   }
 }
