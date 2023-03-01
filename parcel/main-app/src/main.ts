@@ -42,7 +42,7 @@ versea.registerApps([
 
 Vue.config.productionTip = false;
 
-(window as any).versea = versea
+(window as unknown as { versea: Versea }).versea = versea
 
 new Vue({
   router,

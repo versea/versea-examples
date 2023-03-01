@@ -14,14 +14,9 @@
     "react-app-rewired": "^2.2.1"
   },
   "scripts": {
-    "start": "BROWSER=none react-app-rewired start",
+    "start": "cross-env BROWSER=none react-app-rewired start",
     "build": "react-app-rewired build",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
   },
   "browserslist": {
     "production": [
